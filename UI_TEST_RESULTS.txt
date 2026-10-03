@@ -1,0 +1,8 @@
+iphone 375×549: 21 popup/scene layouts, real focus/joint gathering, reservation/arrival, Eden cart, custom crafting, shelf 14, save/reload, rotation PASS
+iphone 844×300: 21 popup/scene layouts, real focus/joint gathering, reservation/arrival, Eden cart, custom crafting, shelf 14, save/reload, rotation PASS
+ipad 768×900: 21 popup/scene layouts, real focus/joint gathering, reservation/arrival, Eden cart, custom crafting, shelf 14, save/reload, rotation PASS
+ipad 1024×650: 21 popup/scene layouts, real focus/joint gathering, reservation/arrival, Eden cart, custom crafting, shelf 14, save/reload, rotation PASS
+pc 1280×800: 21 popup/scene layouts, real focus/joint gathering, reservation/arrival, Eden cart, custom crafting, shelf 14, save/reload, rotation PASS
+WARNINGS
+
+ERRORS

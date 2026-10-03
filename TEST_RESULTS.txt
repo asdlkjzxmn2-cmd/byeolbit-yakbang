@@ -1,0 +1,121 @@
+test-phase1
+PASS Focus: exactly three independent original gathers, 180 minutes, 24 XP and three counters
+PASS Focus 2 charges: first two doubled, third normal; deterministic original RNG comparison
+PASS Rowen independent stock, exact surcharge, arrival, one reservation, cooldown, expiry
+PASS Eden special procurement stays exact 2x, saves, four outcomes, shared 10-minute checkout
+PASS Riv one roll/day, reload persistence, cooldown and event distribution boundaries
+PASS Riv trade once, joint gather two rolls +25% and buff two charges
+PASS Sleep clears gather potion and Riv info; save/reload does not
+PHASE 1 PASSED
+
+test-phase2
+PASS Mocha: 150 clicks, no last-seven repeats, at most 2 observations and 1 important per day
+PASS NPC cross references only discovered people
+PASS Regulars: five episodes, minimum five days apart, persistence
+PASS Ordinary returning customer remembers preferences, third visit; bounded 16 records
+PASS Per-recipe records and long sales image use only actual new sales
+PHASE 2 PASSED
+
+test-phase3
+PASS Anomalies do not change pool; targeted amounts +50%, combined cap +75%, x2 applied last
+PASS Anomaly schedule 8–12 days, quiet day after major, rumors separate from trend
+PASS Story matching has multiple valid answers, no failed penalty, never consumes ordinary order slots
+PASS Rare guests max two/season, ignored night has no penalty and rolls once
+PASS Variants: low-probability single instance within actual stock, save, no extra units
+PASS Story premium applies only to the individual variant, not the whole batch
+PHASE 3 PASSED
+
+test-phase4
+PASS Record book discovery, gifts, recipe notes and current season persist without fabricated history
+PASS Village contributions: optional, tier rewards exactly once, no general orders or promotion changes
+PASS QoL upgrades, 14 shelves migrate intact, custom quantity consumes exact recipe materials
+PASS Experiment: after closing, once per day, 20 minutes, one exact material set, no product or XP reward
+PASS Lost glove only after notice, single find, next day thanks; parcel four branches
+PASS Mystery progresses only after encounter, 30–45 day cooldown, no finale and state survives
+PHASE 4 PASSED
+
+test-gather
+PASS First 66 completed forest gathers cannot discover, even with winning random draws; only 67th rolls
+PASS At 65 to 66 there is no discovery RNG; 12 percent boundary; other regions never discover
+PASS Acquisition is permanent and never drops twice or performs discovery RNG again
+PASS Library lists unknown recipe but cannot teach it; no thresholds, location or probability hints
+PASS Manufacturing deducts exactly 16 herbs and 6 mushrooms per bottle; established time and XP remain
+PASS Drinking consumes one bottle and one minute; all 5 zones supported; repeat drinks are rejected
+PASS Boost doubles every final material including rare pity and local guarantees; only six completed gathers
+PASS Travel, market, craft, study, time passing preserve charges; sleep clears charges; rejected gathering consumes nothing
+PASS Save reload preserves remaining charges and counters; real day-111 V08.2 save upgrades without guesses
+PASS Migration validates counters and buff range without accepting invalid old fields
+V08.3 GATHER BOOST CHECKS PASSED
+
+test-regression
+PASS 41 recipes; library acquisition guards; market exclusions
+PASS All 41 recipes: actual yield, material deduction and elapsed time
+PASS Migration preserves V06 stock, money, XP; sanitizes old trend logs; idempotent
+PASS Research needs both actual manufacturing and paid sales plus skill; release gates requests/trends
+PASS Two regions: repair cost, travel guard, exclusive yields, discovery at 2/5 visits
+PASS Hidden requests: at most one per year AND 48 days; never ordinary pool
+PASS Festival 5-day preparation, annual rotation, demand, one contract and no duplicate reward
+PASS Promotion: both sales/time, reputation scaling, stock/open-time only, 3-day trend
+simulated units ordinary/recommended/discount: 3877/5184/5177
+PASS Recommended shelf is 60% as fast; mixed records persist; featured trends sell faster
+PASS Deadline failure is one-time; morning journal does not reveal trend
+PASS 100-day gameplay simulation with saves, festivals, research, travel, crafting
+ALL GAME LOGIC CHECKS PASSED
+
+test-v08-regression
+PASS Golden hand unlock, announcement persistence and library-only learning
+PASS All 41 recipes halve every batch time, including 50; locked 50 rejected
+PASS Rep 6 first next morning, then exact 6-day visits; no early visits or rep-drop reset
+PASS Stock sampling: 6 distinct high/rare materials, local exclusives included, 20..100; 2x price
+PASS Cart quantity validation; no time for selecting; one atomic 10-minute checkout; no duplicate charges
+PASS Cart and timetable survive save/reload without rerolling; old max-level save gets new features
+PASS Refusal clears basket without cost or elapsed time
+V08 LOGIC TESTS PASSED
+
+test-trends
+PASS 20 years: fixed totals, unrestricted daily feature, seasonal remainder, no previous-year repeated set
+PASS All base daily items allowed in every season; the remaining slots prioritize primary season
+PASS Exploration and research require the first actual retail sale; unlock/craft/fulfill/zero sale do not qualify
+PASS Off-season discount and recommendation promotions activate unchanged, including across season boundaries
+PASS Five years of promotions never expand totals or repeat last-year displayed sets
+PASS V08 migration keeps off-season daily feature and earned promotion, money, skills and merchant schedule
+PASS Save and reload keep daily feature and roster; seasonal boost never applies to off-season feature
+V08.1 DAILY AND SEASONAL TREND TESTS PASSED
+
+test-influence
+PASS All 8 parent-child pairs: forward demand grows; reverse is weak; no sibling bonus
+PASS All shelves, unique products, stocked trading time only; reading panels and crafting/fulfilling cannot advance
+PASS Both thresholds and actual first retail sale required; next-day succession works during parent promotion
+PASS Normal retail tick actually accumulates both records and schedules succession; no accounting duplication
+PASS Reverse promotion is blocked even with pre-existing full discount/recommend records; no reverse succession
+PASS Other earned promotions are not overwritten; completed succession waits
+PASS Migration and save retain progress and inherited promotion, preserve quota and annual history
+PASS 10 years with inherited daily products: fixed counts, seasonal others, no previous-year duplicate, reload stable
+V08.2 INFLUENCE TESTS PASSED
+
+test-compatibility
+PASS 1000 paired V08.3/V09 direct gathers: exact same base/rare/pity/exclusive yields, XP, time, discovery and charges
+PASS 25 paired focus batches equal exactly three legacy gathers across all zones/charge boundaries
+PASS Pending night visit, known regulars, gifts and daily roll survive actual localStorage round-trip
+PASS Real V08.2 day-111 save preserves economic/progression data, new histories begin empty
+
+test-density
+PASS 960-day maximum-exposure simulation: majority quiet, no consecutive strong-event days, <=2 rare guests/season
+{
+  "days": 960,
+  "counts": {
+    "quiet": 720,
+    "service": 13,
+    "anomaly": 91,
+    "riv": 57,
+    "small": 18,
+    "night": 22,
+    "story": 20,
+    "rare": 11,
+    "mystery": 8
+  },
+  "quietRate": 0.75,
+  "anomalies": 91,
+  "meanAnomalyInterval": 10.477777777777778,
+  "rareMax": 1
+}
