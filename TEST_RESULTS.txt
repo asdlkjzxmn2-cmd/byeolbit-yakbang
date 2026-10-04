@@ -56,7 +56,7 @@ PASS Two regions: repair cost, travel guard, exclusive yields, discovery at 2/5 
 PASS Hidden requests: at most one per year AND 48 days; never ordinary pool
 PASS Festival 5-day preparation, annual rotation, demand, one contract and no duplicate reward
 PASS Promotion: both sales/time, reputation scaling, stock/open-time only, 3-day trend
-simulated units ordinary/recommended/discount: 3827/5161/5285
+simulated units ordinary/recommended/discount: 3881/5183/5226
 PASS Recommended shelf is 60% as fast; mixed records persist; featured trends sell faster
 PASS Deadline failure is one-time; morning journal does not reveal trend
 PASS 100-day gameplay simulation with saves, festivals, research, travel, crafting
@@ -142,6 +142,20 @@ PASS Known-NPC gates, actual dialogue memory and distinct last-three storage sur
 PASS All environmental rendering is state- and RNG-neutral over every map/weather/time
 PASS 11 maps: actual canvas pixels vary across morning/noon/sunset/night and clear/cloud/rain; outdoor starry-night sky differs
 PASS All four mandatory Mocha anomaly lines retain the legacy dialogue RNG draw count over repeated actual renders
-PASS 12 core generators unchanged; 480 paired V09.1/V09.2 days retain exact anomaly schedule, effect states, RNG, gathering and economy
+PASS 11 core generators unchanged (daily weather selection intentionally updated); 480 paired V09.1/V09.2 days retain exact anomaly schedule, effect states, RNG, gathering and economy
 NPC line pools {"mocha":8,"rowen":5,"eden":5,"riv":5,"luka":3,"mare":3,"soren":3,"nia":3}
 V09.2 11 TEST GROUPS PASSED
+
+test-weather
+PASS Old saves retain current weather, infer no previous streak or past rain, and migrate idempotently
+PASS New day uses one random draw; re-entry/render/save/load never rerolls same day
+PASS Season weighting: summer more rain; existing weather is weighted to persist for 2–3 days
+PASS Rain gaps and streak limits: only summer may rain twice, never three days
+PASS Current ordinary weather remains fixed through movement, crafting UI, maps and gathering
+PASS Weather-flow roundtrip preserves cooldown and streak; invalid future values are reset safely
+PASS 96000-day seasonal distribution: moderate rain, lower switching than the legacy 75%, all cooldown/streak bounds
+[{"season":"봄","days":24000,"rainPercent":8.3,"changePercent":48.51,"counts":{"비":1993,"맑음":15335,"흐림":5336,"별빛 밤":1336}},{"season":"여름","days":24000,"rainPercent":14.77,"changePercent":52.94,"counts":{"맑음":14158,"흐림":4924,"비":3546,"별빛 밤":1372}},{"season":"가을","days":24000,"rainPercent":5.56,"changePercent":43.73,"counts":{"맑음":16640,"별빛 밤":1308,"흐림":4718,"비":1334}},{"season":"겨울","days":24000,"rainPercent":4.6,"changePercent":45.17,"counts":{"맑음":15446,"비":1105,"흐림":6163,"별빛 밤":1286}}]
+PASS Rain pixel motion changes across frames without advancing time/economy/RNG; reduced motion stays still
+PASS Single RAF loop, ~20fps idle-rain paint cap, popup/hidden pause, resume and clear-weather cleanup
+PASS Anomaly definitions, frequency/density/effects/dialogue and core gathering/market/merchant functions remain byte-identical
+V09.3 10 TEST GROUPS PASSED
