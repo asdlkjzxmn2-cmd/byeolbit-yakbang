@@ -1,0 +1,6 @@
+PASS iphone 375x549: 16 cards, bounds/text fit, real placement/storage clicks, scroll retention, persistent placement, four map times/night window, deferred once/day anomaly, reload and rotation
+PASS iphone 844x300: 16 cards, bounds/text fit, real placement/storage clicks, scroll retention, persistent placement, four map times/night window, deferred once/day anomaly, reload and rotation
+PASS ipad 768x900: 16 cards, bounds/text fit, real placement/storage clicks, scroll retention, persistent placement, four map times/night window, deferred once/day anomaly, reload and rotation
+PASS ipad 1024x650: 16 cards, bounds/text fit, real placement/storage clicks, scroll retention, persistent placement, four map times/night window, deferred once/day anomaly, reload and rotation
+PASS pc 1280x800: 16 cards, bounds/text fit, real placement/storage clicks, scroll retention, persistent placement, four map times/night window, deferred once/day anomaly, reload and rotation
+Browser errors: 0

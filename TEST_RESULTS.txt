@@ -56,7 +56,7 @@ PASS Two regions: repair cost, travel guard, exclusive yields, discovery at 2/5 
 PASS Hidden requests: at most one per year AND 48 days; never ordinary pool
 PASS Festival 5-day preparation, annual rotation, demand, one contract and no duplicate reward
 PASS Promotion: both sales/time, reputation scaling, stock/open-time only, 3-day trend
-simulated units ordinary/recommended/discount: 3877/5184/5177
+simulated units ordinary/recommended/discount: 3810/5228/5208
 PASS Recommended shelf is 60% as fast; mixed records persist; featured trends sell faster
 PASS Deadline failure is one-time; morning journal does not reveal trend
 PASS 100-day gameplay simulation with saves, festivals, research, travel, crafting
@@ -119,3 +119,14 @@ PASS 960-day maximum-exposure simulation: majority quiet, no consecutive strong-
   "meanAnomalyInterval": 10.477777777777778,
   "rareMax": 1
 }
+
+test-atmosphere
+PASS Collected items remain in book, no automatic placement or loss on V09 migration
+PASS Placement, storage, ownership validation, same day/time/currency/RNG and save roundtrip
+PASS Malformed placement references and observation dates are safely discarded
+PASS Every collected object has a distinct matching pixel shape; day and night palettes differ
+PASS Only current-day anomalies render; commentary waits through panels and major story events
+PASS All four anomaly observations are once per day, with no probability or time changes
+PASS Current V08.2 save migrates without adding invented keepsakes or erasing gather boost
+PASS actual canvas rendering: four times of day and all four anomalies change both window and map pixels
+V09.1 ATMOSPHERE AND KEEPSAKES PASSED
