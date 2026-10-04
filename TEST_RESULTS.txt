@@ -56,7 +56,7 @@ PASS Two regions: repair cost, travel guard, exclusive yields, discovery at 2/5 
 PASS Hidden requests: at most one per year AND 48 days; never ordinary pool
 PASS Festival 5-day preparation, annual rotation, demand, one contract and no duplicate reward
 PASS Promotion: both sales/time, reputation scaling, stock/open-time only, 3-day trend
-simulated units ordinary/recommended/discount: 3810/5228/5208
+simulated units ordinary/recommended/discount: 3827/5161/5285
 PASS Recommended shelf is 60% as fast; mixed records persist; featured trends sell faster
 PASS Deadline failure is one-time; morning journal does not reveal trend
 PASS 100-day gameplay simulation with saves, festivals, research, travel, crafting
@@ -130,3 +130,18 @@ PASS All four anomaly observations are once per day, with no probability or time
 PASS Current V08.2 save migrates without adding invented keepsakes or erasing gather boost
 PASS actual canvas rendering: four times of day and all four anomalies change both window and map pixels
 V09.1 ATMOSPHERE AND KEEPSAKES PASSED
+
+test-v092
+PASS Korean particles handle final consonants, vowels, rieul, quotes and levels
+PASS Old book/log/traces are corrected idempotently without changing dates or economic state
+PASS Shop render and other indoor scenes no longer announce anomalies automatically
+PASS First Mocha conversation owns the daily anomaly line; subsequent map and chats do not repeat it
+PASS Map first: one player line, none from Mocha afterward, repeat entries/reload preserve the flag
+PASS No announcement behind events/modals, on stale anomaly, or on a normal day; next day can speak
+PASS Known-NPC gates, actual dialogue memory and distinct last-three storage survive reload
+PASS All environmental rendering is state- and RNG-neutral over every map/weather/time
+PASS 11 maps: actual canvas pixels vary across morning/noon/sunset/night and clear/cloud/rain; outdoor starry-night sky differs
+PASS All four mandatory Mocha anomaly lines retain the legacy dialogue RNG draw count over repeated actual renders
+PASS 12 core generators unchanged; 480 paired V09.1/V09.2 days retain exact anomaly schedule, effect states, RNG, gathering and economy
+NPC line pools {"mocha":8,"rowen":5,"eden":5,"riv":5,"luka":3,"mare":3,"soren":3,"nia":3}
+V09.2 11 TEST GROUPS PASSED
