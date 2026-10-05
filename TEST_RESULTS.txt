@@ -56,7 +56,7 @@ PASS Two regions: repair cost, travel guard, exclusive yields, discovery at 2/5 
 PASS Hidden requests: at most one per year AND 48 days; never ordinary pool
 PASS Festival 5-day preparation, annual rotation, demand, one contract and no duplicate reward
 PASS Promotion: both sales/time, reputation scaling, stock/open-time only, 3-day trend
-simulated units ordinary/recommended/discount: 3881/5183/5226
+simulated units ordinary/recommended/discount: 3832/5194/5196
 PASS Recommended shelf is 60% as fast; mixed records persist; featured trends sell faster
 PASS Deadline failure is one-time; morning journal does not reveal trend
 PASS 100-day gameplay simulation with saves, festivals, research, travel, crafting
@@ -142,7 +142,7 @@ PASS Known-NPC gates, actual dialogue memory and distinct last-three storage sur
 PASS All environmental rendering is state- and RNG-neutral over every map/weather/time
 PASS 11 maps: actual canvas pixels vary across morning/noon/sunset/night and clear/cloud/rain; outdoor starry-night sky differs
 PASS All four mandatory Mocha anomaly lines retain the legacy dialogue RNG draw count over repeated actual renders
-PASS 11 core generators unchanged (daily weather selection intentionally updated); 480 paired V09.1/V09.2 days retain exact anomaly schedule, effect states, RNG, gathering and economy
+PASS 11 core generators unchanged (daily weather selection intentionally updated); 480 paired days retain anomaly schedule, effect states, RNG, gathering and economy; intentional story-prompt index expansion and rumor wording excluded
 NPC line pools {"mocha":8,"rowen":5,"eden":5,"riv":5,"luka":3,"mare":3,"soren":3,"nia":3}
 V09.2 11 TEST GROUPS PASSED
 
@@ -159,3 +159,29 @@ PASS Rain pixel motion changes across frames without advancing time/economy/RNG;
 PASS Single RAF loop, ~20fps idle-rain paint cap, popup/hidden pause, resume and clear-weather cleanup
 PASS Anomaly definitions, frequency/density/effects/dialogue and core gathering/market/merchant functions remain byte-identical
 V09.3 10 TEST GROUPS PASSED
+
+test-continuity
+PASS Existing V09.3 / V08.2 saves get empty history, keep inventory, data and anomaly dates
+PASS Board draw/open stable across repeat render and save/reload; no time, economy or core RNG changes
+PASS A town thread moves through beginning, continuation, resolution, then leaves with a quiet gap
+PASS Memo expiry removes old posts; seasonal/weather and known-NPC gates always valid
+PASS Legacy lost-glove thank-you expires without deleting the old record or pending search
+PASS Finished regulars continue in coherent three-part arcs, at least five days apart, across years
+PASS Post-intro keepsake opportunity is cosmetic, uses separate RNG and never duplicates gifts
+PASS Returning customers remember actual purchase and third visit does not invent prior product
+PASS Mocha expands life pool but preserves 45/35/20 choice and recent-seven behavior
+PASS New NPC text choices avoid immediate repetition and do not consume economic/event RNG
+PASS Existing story indices preserved, ten added multi-answer prompts, same occurrence function
+PASS Small event variety avoids last-four repeats and wet-envelope only appears in rain
+PASS Small follow-up completes automatically, once, no reward or new chore
+PASS Mystery continues after sixth visit without finale or cooldown changes
+PASS Experiment keeps cost/time/no-output rules while notes continue beyond stage three
+PASS Season totals count actual direct/focus gathering, actual products and retail sales only
+PASS Season project changes across years without last-two repeats; exact existing rewards retained
+PASS Record book paginates 40 entries, preserves old records, summaries expose no hidden recipes
+PASS Bad optional saved fields safely reset and load stays idempotent
+PASS Eight-year background progression remains bounded; yearly signatures differ without legacy RNG draws
+PASS Rumor wording changes once per occurrence; effect, duration, core RNG and saved wording remain stable
+PASS Quiet night visits get short varied text with no additional time or rewards
+PASS An ongoing seasonal town thread finishes across the season boundary rather than resetting
+V09.4 CONTINUITY 23 TEST GROUPS PASSED
